@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu Tiên Giới</title>
+    <link rel="stylesheet" href="css/start.css">
+</head>
+<body>
+
+<!-- BACKGROUND SCENE -->
+<div class="scene">
+    <div class="cloud-layer"></div>
+    <img src="assets/bg/hinh-nen-rong-dep-3d.jpg" class="dragon">
+</div>
+
+<!-- START SCREEN -->
+<div id="start-screen" class="screen active">
+    <div class="content">
+        <h1 class="title">Tu Tiên Giới</h1>
+        <p class="subtitle">Immortal Cultivation World</p>
+        <button id="start-btn">Bắt đầu tu luyện</button>
+    </div>
+    
+</div>
+
+<!-- CREATE CHARACTER -->
+<div id="create-screen" class="screen">
+    <div class="content box">
+        <h2>Tạo Nhân Vật</h2>
+
+        <input id="char-name" placeholder="Tên tu sĩ">
+
+        <select id="origin">
+            <option value="Thiếu niên chi tinh">Thiếu niên chi tinh</option>
+            <option value="Cô nhi vong mệnh">Cô nhi vong mệnh</option>
+            <option value="Quy Canh Nông">Quy Canh Nông</option>
+            <option value="Thợ săn núi sâu">Thợ săn núi sâu</option>
+            <option value="Thanh niên thư sinh">Thanh niên thư sinh</option>
+        </select>
+
+        <button id="confirm-create">Giác tỉnh</button>
+    </div>
+</div>
+
+<!-- AWAKENING RESULT -->
+<div id="awakening-screen" class="screen">
+    <div id="awakening-result" class="content box"></div>
+</div>
+<!-- CULTIVATE SCREEN -->
+<div id="cultivate-screen" class="screen">
+    <div class="content box cultivate">
+
+        <h2 id="p-name"></h2>
+        <p>🔮 Linh căn: <span id="p-root"></span></p>
+        <p>⚔️ Cảnh giới: <span id="p-realm"></span></p>
+
+        <div class="qi-box">
+            <div class="qi-bar-bg">
+                <div id="qi-bar"></div>
+            </div>
+            <p id="qi-text">0 / 100 Linh Khí</p>
+        </div>
+
+        <button id="cultivate-btn">🧘‍♂️ Tụ Linh</button>
+        <button id="break-btn" disabled>⚡ Đột Phá</button>
+
+    </div>
+</div>
+
+<script src="frontend/main.js"></script>
+</body>
+</html>

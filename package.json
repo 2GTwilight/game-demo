@@ -1,0 +1,14 @@
+{
+  "name": "tu-tien-game",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "sqlite3": "^5.1.7",
+    "ws": "^8.19.0"
+  }
+}

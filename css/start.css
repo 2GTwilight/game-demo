@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: black;
+    overflow: hidden;
+    color: #fff;
+}
+
+/* ===== SCENE ===== */
+.scene {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
+
+.dragon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cloud-layer {
+    position: absolute;
+    inset: 0;
+    background: url("assets/bg/hinh-nen-rong-dep-3d.jpg") repeat-x;
+    opacity: 0.25;
+    animation: cloudMove 90s linear infinite;
+}
+
+@keyframes cloudMove {
+    from { background-position-x: 0; }
+    to { background-position-x: 3000px; }
+}
+
+/* ===== SCREEN SYSTEM ===== */
+.screen {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.8s ease;
+}
+
+.screen.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* ===== CONTENT ===== */
+.content {
+    text-align: center;
+    animation: floatY 4s ease-in-out infinite;
+}
+
+@keyframes floatY {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+.title {
+    font-size: 64px;
+    text-shadow: 0 0 20px gold;
+}
+
+.subtitle {
+    margin: 12px 0 30px;
+    opacity: 0.85;
+}
+
+button {
+    padding: 12px 26px;
+    font-size: 18px;
+    background: linear-gradient(135deg, gold, orange);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(1.1);
+}
+
+/* ===== BOX ===== */
+.box {
+    background: rgba(0,0,0,0.65);
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(255,215,0,0.3);
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 12px 0;
+    border-radius: 6px;
+    border: none;
+}
+/* ===== CULTIVATION ===== */
+.cultivate {
+    width: 360px;
+}
+
+.qi-box {
+    margin: 20px 0;
+}
+
+.qi-bar-bg {
+    width: 100%;
+    height: 18px;
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#qi-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
+    transition: width 0.4s ease;
+}
+
+#qi-text {
+    margin-top: 6px;
+    font-size: 14px;
+    opacity: 0.85;
+}
